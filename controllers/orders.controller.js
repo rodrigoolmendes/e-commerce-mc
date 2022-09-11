@@ -21,9 +21,9 @@ async function addOrder(req, res, next) {
   }
   // console.log("cart >>>", cart)
   console.log("req.session >>>", req.session)
-  const cart = req.session.cart
+  // const cart = req.session.cart
 
-  const order = new Order(cart, userDocument);
+  const order = new Order(cart, userDocument); //pq esta dando undefined]
 
   try {
     await order.save();
